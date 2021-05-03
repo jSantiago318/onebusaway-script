@@ -19,7 +19,7 @@
         <property name="order" value="-2" />
         <property name="properties">
             <props>
-                <prop key="bundlePath">/Users/vincentliao/stash/onebusaway-script/separate/obatemp/apache-tomcat-9.0.0.M1/obastuff/bundledata</prop>
+                <prop key="bundlePath">/home/joshua/testers/onebusaway-script/src/obatemp/apache-tomcat-8.5.65/obastuff/bundledata</prop>
             </props>
         </property>
     </bean>
@@ -35,10 +35,10 @@
 
     <!-- You can add real-time transit data config info here later.  See https://github.com/OneBusAway/onebusaway-application-modules/wiki/Real-Time-Data-Configuration-Guide for instructions  -->
     <bean class="org.onebusaway.transit_data_federation.impl.realtime.gtfs_realtime.GtfsRealtimeSource">
-        <property name="tripUpdatesUrl" value="https://data.texas.gov/download/rmk2-acnw/application/octet-stream" />
-        <property name="vehiclePositionsUrl" value="https://data.texas.gov/download/i5qp-g5fd/application/octet-stream" />
-        <property name="alertsUrl" value="https://data.texas.gov/download/nusn-7fcn/application/octet-stream" />
+        <property name="tripUpdatesUrl" value="http://198.199.84.128:8080/web/api/v1/key/f78a2e9a/agency/1/command/gtfs-rt/tripUpdates?format=xml" />
+        <property name="vehiclePositionsUrl" value="http://198.199.84.128:8080/web/api/v1/key/f78a2e9a/agency/1/command/gtfs-rt/vehiclePositions?format=xml" />
+        <property name="alertsUrl" value="" />
         <!-- Optionally set the refresh interval - how often we query the URLs, in seconds (default=30) -->
-        <property name="refreshInterval" value="30"/>
+        <property name="refreshInterval" value="5"/>
     </bean>
 </beans>

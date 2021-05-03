@@ -9,7 +9,7 @@ echo "OneBusAway Quick Instance Spinup Script"
 echo "v0.1"
 echo "By Vincent Liao"
 
-mkdir -f obatemp
+mkdir -p obatemp
 cd obatemp
 
 # Retrieve Tomcat Server
@@ -43,7 +43,7 @@ git clone $OBACODEBASEURL
 echo "Cloned!"
 cd $OBACODEBASEFOLDER
 git stash
-git stash drop
+# git stash drop
 echo "Reset to master!"
 git checkout $OBAVERSIONTAG
 cd ..

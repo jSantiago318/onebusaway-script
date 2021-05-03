@@ -23,11 +23,11 @@
     </bean>
 
     <bean id="externalGeocoderImpl" class="org.onebusaway.geocoder.impl.FixedGeocoderImpl">
-        <property name="lat" value="42.345" />
-        <property name="lon" value="-71.083" />
-        <property name="city" value="Boston" />
-        <property name="state" value="MA" />
-        <property name="postalCode" value="02116" />
+        <property name="lat" value="18.210" />
+        <property name="lon" value="-67.140" />
+        <property name="city" value="Mayaguez" />
+        <property name="state" value="PR" />
+        <property name="postalCode" value="00682" />
     </bean>
 
     <!-- Service that is used to verify API keys -->

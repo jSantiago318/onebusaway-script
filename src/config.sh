@@ -8,7 +8,7 @@ source secrets.sh
 
 # Edit these URLs as needed
 ##########################
-GTFSURL="https://data.texas.gov/download/r4v4-vz24/application/zip"
+GTFSURL="https://drive.google.com/uc?export=download&id=1Ez02DFsdz4f-blBpANEDmibn3w9LzSjI"
 GTFSFILE="gtfs.zip"
 
 # Latest transit data bundle builder url can be found at:
@@ -31,10 +31,10 @@ OBAPRESENTATIONJAR="onebusaway-presentation-1.1.14.jar"
 
 # Latest Tomcat Server can be found at:
 # http://tomcat.apache.org/index.html
-TOMCATSERVERURL="http://www.motorlogy.com/apache/tomcat/tomcat-8/v8.0.30/bin/apache-tomcat-8.0.30.tar.gz"
-TOMCATSERVERFILE="apache-tomcat-8.0.30.tar.gz"
+TOMCATSERVERURL="https://downloads.apache.org/tomcat/tomcat-8/v8.5.65/bin/apache-tomcat-8.5.65.tar.gz"
+TOMCATSERVERFILE="apache-tomcat-8.5.65.tar.gz"
 # Folder name is the same as the URL end part without the tar.gz
-TOMCATSERVERFOLDER="apache-tomcat-8.0.30"
+TOMCATSERVERFOLDER="apache-tomcat-8.5.65"
 
 PSQLJDBCDRIVERURL="https://jdbc.postgresql.org/download/postgresql-9.4.1207.jar"
 PSQLJDBCDRIVERFILE="postgresql-9.4.1207.jar"
