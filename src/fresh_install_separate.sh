@@ -70,14 +70,18 @@ echo "Building Transit Bundle Data..."
 java -Xmx1G -jar $TRANSITDATABUILDERFILE $GTFSFILE ./$TOMCATSERVERFOLDER/obastuff/$BUNDLEDIR -P tripEntriesFactory.throwExceptionOnInvalidStopToShapeMappingException=false
 echo "Built!"
 
+echo "Create user and db"
+ -u postgres createuser $POSTGRES_USERNAME
+ -u postgres createdb oba
+
 # Load Transit Bundle Data into SQL Database
 echo "Sending Bundle Data to Postgres Database... (This takes a while)"
 java -classpath $DATABASELOADERFILE:$PSQLJDBCDRIVERFILE \
  org.onebusaway.gtfs.GtfsDatabaseLoaderMain \
  --driverClass=org.postgresql.Driver \
  --url=$POSTGRES_URL \
- --username=$POSTGRES_USERNAME \
- --password=$POSTGRES_PASSWORD \
+#  --username=$POSTGRES_USERNAME \
+#  --password=$POSTGRES_PASSWORD \
  ./gtfs.zip
 echo "Complete!"
 

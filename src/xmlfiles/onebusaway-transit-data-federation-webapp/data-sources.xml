@@ -9,8 +9,8 @@
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.postgresql.Driver" />
         <property name="url" value="jdbc:postgresql://localhost/oba" />
-        <property name="username" value="vincentliao" />
-        <property name="password" value="" />
+        <property name="username" value="postgress" />
+        <property name="password" value="uprm" />
     </bean>
 
     <alias name="dataSource" alias="mutableDataSource" />
@@ -19,7 +19,7 @@
         <property name="order" value="-2" />
         <property name="properties">
             <props>
-                <prop key="bundlePath">/home/joshua/testers/onebusaway-script/src/obatemp/apache-tomcat-8.5.65/obastuff/bundledata</prop>
+                <prop key="bundlePath">onebusaway-script/src/obatemp/apache-tomcat-9.0.52/obastuff/bundledata</prop>
             </props>
         </property>
     </bean>
@@ -35,10 +35,10 @@
 
     <!-- You can add real-time transit data config info here later.  See https://github.com/OneBusAway/onebusaway-application-modules/wiki/Real-Time-Data-Configuration-Guide for instructions  -->
     <bean class="org.onebusaway.transit_data_federation.impl.realtime.gtfs_realtime.GtfsRealtimeSource">
-        <property name="tripUpdatesUrl" value="http://198.199.84.128:8080/web/api/v1/key/f78a2e9a/agency/1/command/gtfs-rt/tripUpdates?format=xml" />
-        <property name="vehiclePositionsUrl" value="http://198.199.84.128:8080/web/api/v1/key/f78a2e9a/agency/1/command/gtfs-rt/vehiclePositions?format=xml" />
+        <property name="tripUpdatesUrl" value="http://localhost:8080/web/api/v1/key/f78a2e9a/agency/1/command/gtfs-rt/tripUpdates?format=xml" />
+        <property name="vehiclePositionsUrl" value="http://localhost:8080/web/api/v1/key/f78a2e9a/agency/1/command/gtfs-rt/vehiclePositions?format=xml" />
         <property name="alertsUrl" value="" />
         <!-- Optionally set the refresh interval - how often we query the URLs, in seconds (default=30) -->
-        <property name="refreshInterval" value="5"/>
+        <property name="refreshInterval" value="10"/>
     </bean>
 </beans>
